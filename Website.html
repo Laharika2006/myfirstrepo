@@ -1,0 +1,85 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <meta charset="UTF-8"> 
+  <title>Event Registration Form</title> 
+  <style> 
+    body { 
+      font-family: Arial, sans-serif; 
+      padding: 20px; 
+    } 
+    form { 
+      max-width: 500px; 
+      margin: auto; 
+      border: 1px solid #ccc; 
+      padding: 20px; 
+      border-radius: 10px; 
+      box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+    } 
+    label { 
+      display: block; 
+      margin-top: 10px; 
+      font-weight: bold; 
+    } 
+    input, select, textarea { 
+      width: 100%; 
+      padding: 8px; 
+      margin-top: 5px; 
+      box-sizing: border-box; 
+    } 
+    .buttons { 
+      margin-top: 15px; 
+      display: flex; 
+      gap: 10px; 
+    } 
+  </style> 
+</head> 
+<body> 
+ 
+  <h2 style="text-align:center;"> Registration Form</h2> 
+ 
+  <form id="eventForm"> 
+    <label for="fullname">Full Name:</label> 
+    <input type="text" id="fullname" name="fullname" required>
+    <label for="email">Email:</label> 
+    <input type="email" id="email" name="email" required> 
+ 
+    <label for="phone">Phone Number:</label> 
+    <input type="tel" id="phone" name="phone" required> 
+ 
+    <label>Gender:</label> 
+    <input type="radio" id="male" name="gender" value="Male"> 
+    <label for="male" style="display:inline;">Male</label> 
+    <input type="radio" id="female" name="gender" value="Female"> 
+    <label for="female" style="display:inline;">Female</label> 
+    <input type="radio" id="other" name="gender" value="Other"> 
+    <label for="other" style="display:inline;">Other</label> 
+ 
+        <label for="city">City:</label> 
+    <select id="city" name="city" required> 
+      <option value="">--Select your city--</option> 
+      <option value="New York">New York</option> 
+      <option value="London">London</option> 
+      <option value="Mumbai">Mumbai</option> 
+      <option value="Tokyo">Tokyo</option> 
+    </select> 
+ 
+    <label for="comments">Additional Comments:</label> 
+    <textarea id="comments" name="comments" rows="4"></textarea> 
+ 
+    <div class="buttons"> 
+      <button type="submit">Submit</button> 
+      <button type="reset">Reset</button> 
+      <button type="button" onclick="confirmSubmission()">Confirm</button> 
+    </div> 
+  </form> 
+ 
+  <script> 
+    function confirmSubmission() { 
+      alert("Please confirm your registration details before submitting!"); 
+    } 
+  </script> 
+ 
+</body> 
+</html> 
+ 
